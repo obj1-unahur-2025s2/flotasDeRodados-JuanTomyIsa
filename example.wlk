@@ -39,6 +39,11 @@ object trafic {
   var interior = interiorComodo
   var motor = pulenta
 
+  //method consulta
+  method capacidad() = interior.capacidad() 
+  method velocidadMaxima() = motor.velocidadMaxima()
+  method peso() = 4000 + interior.peso() + motor.peso()
+  method color() = "blanco"   
 
   //metodo de indicacion
   method cambiarInterior(unInterior) {
@@ -65,4 +70,25 @@ object pulenta {
 object bataton {
   method peso() = 500
   method velocidadMaxima() = 80  
+}
+
+class Gol {
+  method capacidad() = 5
+  method velocidadMaxima() = 120
+  method peso() = 800
+  method color() = "blanco"    
+}
+
+class Siena {
+  method capacidad() = 6
+  method velocidadMaxima() = 140
+  method peso() = 600
+  method color() = "negro"    
+}
+
+class Suzuki {
+  method capacidad() = 7
+  method velocidadMaxima() = 140
+  method peso() = 500
+  method color() = "negro"    
 }
