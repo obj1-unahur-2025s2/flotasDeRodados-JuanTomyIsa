@@ -9,7 +9,7 @@ class Corsa{
   //variables
   const color 
   //metodos de consultas
-  method pasajeros() = 4
+  method capacidad() = 4
   method velocidadMaxima() = 150
   method peso() = 1300
   method color() = color 
@@ -22,7 +22,7 @@ class Kwid{
   var tanqueAdicional = false 
   //metodos de indicacion
   method funcionaAGas() = true//var o method
-  method pasajeros() = if (tanqueAdicional) {4} else {3}
+  method capacidad() = if (tanqueAdicional) {4} else {3}
   method velocidadMaxima() = if (tanqueAdicional) {120} else {110}  
   method peso() = 1200 + if (tanqueAdicional) {150} else {0}
   method color() = "azul" 

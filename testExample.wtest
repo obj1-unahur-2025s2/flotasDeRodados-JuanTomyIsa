@@ -28,5 +28,9 @@ describe "test" {
 
     assert.equals(6450 ,deportes.pesoTotalFlota())
     assert.equals(10700 ,cultura.pesoTotalFlota())
+    assert.that(deportes.estaBienEquipada())
+    assert.notThat(cultura.estaBienEquipada())
+    assert.equals(8, deportes.capacidadTotalEnColor("azul"))
+    assert.equals(11, cultura.capacidadTotalEnColor("azul"))
   }
 }
