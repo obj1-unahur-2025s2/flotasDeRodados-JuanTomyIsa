@@ -1,9 +1,32 @@
-import example.pepita
+import example.*
 
-describe "group of tests for pepita" {
+describe "test" {
+  test "1er test" {
+    var deportes = new Dependencia(empleados=45)
+    var cultura = new Dependencia(empleados=31)
 
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+    var cachito = new Corsa(color="rojo")
+    var corsa2 = new Corsa(color="azul")
+    var corsa3 = new Corsa(color="verde")
+    var kwid1 = new Kwid(tanqueAdicional = true)
+    var kwid2 = new Kwid(tanqueAdicional = true)
+    var kwid3 = new Kwid()
+    var gol1 = new Gol(velocidadMaxima=160,peso=1200,color="beige")
+    deportes.agregarAFlota(cachito)
+    deportes.agregarAFlota(corsa2)
+    deportes.agregarAFlota(corsa3)
+    deportes.agregarAFlota(kwid1)
+    deportes.agregarAFlota(gol1)
+    
+    trafic.cambiarInterior(interiorPopular)
+    trafic.cambiarMotor(bataton)
+    cultura.agregarAFlota(cachito)
+    cultura.agregarAFlota(kwid1)
+    cultura.agregarAFlota(kwid2)
+    cultura.agregarAFlota(kwid3)
+    cultura.agregarAFlota(trafic)
+
+    assert.equals(6450 ,deportes.pesoTotalFlota())
+    assert.equals(10700 ,cultura.pesoTotalFlota())
   }
-
 }

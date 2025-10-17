@@ -73,10 +73,10 @@ object bataton {
 }
 
 class Gol {
+  const property velocidadMaxima = 120
   method capacidad() = 5
-  method velocidadMaxima() = 120
-  method peso() = 800
-  method color() = "blanco"    
+  const property peso = 500
+  const property color = "blanco"   
 }
 
 class Siena {
