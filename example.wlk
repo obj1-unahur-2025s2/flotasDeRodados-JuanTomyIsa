@@ -92,3 +92,26 @@ class Suzuki {
   method peso() = 500
   method color() = "negro"    
 }
+
+//dependecia
+class Dependencia{
+ const property empleados
+ const flotaDeRodados = []
+
+  //metodos de consultas
+  method pesoTotalFlota() = flotaDeRodados.sum({r => r.peso()}) 
+  method estaBienEquipada() = flotaDeRodados.size()>= 3 and 
+    flotaDeRodados.all({r => r.velocidadMaxima() >= 100})
+  method capacidadTotalEnColor(unColor) = flotaDeRodados.filter({r=>r.color()==unColor}).sum({r=>r.capacidad()})
+  method colorDelRodadoMasRapido() = flotaDeRodados.max({r=>r.velocidadMaxima()}).color()
+  method capacidadFaltante() = empleados - flotaDeRodados.sum({r=>r.capacidad()})
+  method esGrande() = empleados >= 40 and flotaDeRodados.size() >= 5    
+
+ //metodos de indicacion
+ method agregarAFlota(unRodado) {
+   flotaDeRodados.add(unRodado)
+ } 
+ method quitarDeFlota(unRodado) {
+   flotaDeRodados.remove(unRodado)
+ }
+}
